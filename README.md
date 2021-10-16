@@ -77,7 +77,7 @@ Speaker **8**  in test matches with speaker  **8** in train for training with LP
 Accuracy of result for training with MFCC is  87.5 %<br>
 Accuracy of result for training with LPC is  12.5 %<br>
 
-# Accuracy for LARGE dataset:
+# Accuracy for large dataset:
 ![](https://i.imgur.com/EqQ1tqm.png)
 
 Accuracy of result for training with MFCC is  87.2340425531915 %<br>
