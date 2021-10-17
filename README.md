@@ -1,45 +1,6 @@
 # Automatic-Speaker-Recognition
 Speaker Recognition is the problem of identifying a speaker from a recording of their speech sample. It is an important topic in Signal Processing and has a variety of applications, especially in security systems. Voice controlled devices also rely heavily on speaker recognition.
 
- The modules I used to do this project are **NumPy, SciPy and Matplotlib** that have a major area of coverage in building appplications of Signal Processing and plotting them
-
-The main principle behind Speaker Recognition is extraction of features from speech followed by training on a data set and testing.
-While doing this project, I mainly got the opportunity to get indroduced to the basics of Digital Signal Processing, Feature extraction using two different algorithms **(MFCC and LPC)**,Feature Matching **(LBG)**
-
-<br>
-
-**STEP1:FEATURE EXTRACTION (MFCC-Mel Frequency Cepstral Coefficients):** <br>
-1.Human hearing as expected is not linear in nature rather it is logarithmic. Our ears act as a filter.<br>
-2.Most popular MFCC's are based on the known variation of the human ear’s critical bandwidths with frequency.
-Filters spaced linearly at low frequencies and logarithmically at high frequencies have been used to
-capture the important characteristics of speech. This is expressed in the mel-frequency
-scale.<br>
-3.The speech signal is divided into frames of 25ms with an overlap of 10ms.<br> 
-4.Each frame is multiplied with a Hamming window.<br>
-5.The periodogram of each frame of speech is calculated by first doing an FFT of 512 samples
-on individual frames, then taking the power spectrum<br>
-6.The entire frequency range is divided into ‘n’ Mel filter banks(12 here), which is also the number of
-coefficients we want.<br>
-7.Then filterbank energies are calculated by multiplying the each filter bank with power spectrum and add up the coefficients.<br>
-8.Finally, applying discrete cosine transform on logarithm of these distinct 'n' energies give MFCCs.<br><br>
-
-**STEP2:FEATURE EXTRACTION (LPC-Linear Prediction Coefficients):**<br>
-1.LPCs are also the popular technique of feature Extraction. It is based on the AutoRegressive Model of the speech.<br>
-2.In this extraction also, the signal is framed same as mentioned in MFCCs.<br>
-3.To estimate the LPC coefficients, we use the Yule-Walker Equations which uses Auto-correlation function.<br>
-
-**STEP3:FEATURE MATCHING (LBG-Linde-Buzo-Gray):**<br>
-1.Generally, the main approach of Feature Matching is mapping vectors from a large vector space to a finite number of regions in that
-space. Each region is called a cluster and can be represented by its center called a codeword. The
-collection of all codewords is called a codebook.<br>
-2.A vector codebook is designed which is the centroid of entire set of training vectors.<br>
-3.Now, the codebook size is doubled by splitting the current one and closest codeword is searched for every training vector and assigned as centroid in next iteration.<br>
-4.This iterations carry out until vector distortion for current iteration falls below a certain value.<br><br>
-
-**STEP4:TRAINING:**<br>
-# Automatic-Speaker-Recognition
-Speaker Recognition is the problem of identifying a speaker from a recording of their speech sample. It is an important topic in Signal Processing and has a variety of applications, especially in security systems. Voice controlled devices also rely heavily on speaker recognition.
-
 The modules I used to do this project are **NumPy, SciPy and Matplotlib** that have a major area of coverage in building appplications of Signal Processing and plotting them
 
 The main principle behind Speaker Recognition is extraction of features from speech followed by training on a data set and testing.
