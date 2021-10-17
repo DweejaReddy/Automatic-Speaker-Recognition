@@ -182,7 +182,7 @@ def training(nfiltbank, orderLPC):
   nCentroid = 16
   codebooks_mfcc = np.empty((nSpeaker,nfiltbank,nCentroid))
   codebooks_lpc = np.empty((nSpeaker, orderLPC, nCentroid))
-  directory = r'C:\Users\Dweeja Reddy\Downloads\dataset\test'
+  directory = r'C:\Users\Dweeja Reddy\Downloads\sm_dataset\test'
   fname = str()
   for i in range(nSpeaker):
     fname = '\s' + str(i+1) + '.wav'
@@ -231,7 +231,7 @@ nSpeaker = 8
 nfiltbank = 12
 orderLPC = 15
 (codebooks_mfcc, codebooks_lpc) = training(nfiltbank, orderLPC)
-directory = r'C:\Users\Dweeja Reddy\Downloads\dataset\train'
+directory = r'C:\Users\Dweeja Reddy\Downloads\sm_dataset\train'
 fname = str()
 nCorrect_MFCC = 0
 nCorrect_LPC = 0
